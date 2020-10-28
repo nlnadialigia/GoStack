@@ -114,33 +114,37 @@ module.exports = {
 
 ### Componentização
 
+A componentização é como nós separamos uma parte do nosso código para transformá-la em algo que pode ser reaproveitada quantas vezes a gente quiser em qualquer parte da nossa aplicação.
 
 <br>
 
 ### Propriedades
 
+Entendimento de como são passados valores como propriedades entre componentes e a recuperação desses valores no componente que recebeu essas propriedades.
 
 <br>
 
 ### Estado e Imutabilidade
 
-
+Como armazenar e manipular valores dentro do nosso componente do React utilizando os React Hooks, criando uma pequena funcionalidade de listagem de projetos para entender o funcionamento do estado.
 
 <br>
 
 ### Importando CSS e imagens
 
+Configuração de alguns loaders do Webpack para aceitar arquivos de CSS e imagens, e estilização da página de listagem de projetos.
 
 <br>
 
 ### Listando Projetos da API
 
+Conexão da  aplicação front-end com o back-end, fazendo com que a página de listagem de projetos passe a salvar os dados da nossa API já desenvolvida no estado da aplicação, e exibi-los em tela.
 
 <br>
 
 ### Cadastrando Projetos
 
-
+Cadastro de novos projetos no banco de dados, mantendo-os salvos na nossa aplicação conforme cadastramos.
 
 <br>
 <br>
@@ -150,6 +154,7 @@ module.exports = {
 - [React](https://pt-br.reactjs.org/)
 - [Babel](https://babeljs.io/)
 - [Webpack](https://webpack.js.org/concepts/)
+- [Axios](https://github.com/axios/axios)
 
 
 <br>

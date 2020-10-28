@@ -99,7 +99,11 @@ Para finalizar esse módulo, iremos falar sobre middlewares e sua importância n
 
 ## :rocket: Tecnologias, Frameworks e Dependências 
 
-- NodeJS
+- [NodeJS](https://nodejs.org/en/)
+- [ExpressJS](https://expressjs.com/pt-br/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [uuidv4](https://www.npmjs.com/package/uuidv4)
+- [Cors](https://www.npmjs.com/package/cors)
 
 
 <br>
