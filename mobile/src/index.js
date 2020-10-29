@@ -30,13 +30,13 @@ export default function App() {
       <StatusBar barStyle='light-content' backgroundColor='#7159c1' />
 
       <SafeAreaView style={styles.container}>
-        {/* <FlatList 
+        <FlatList 
           data={projects}
           keyExtractor={project => project.id}
           renderItem= {({ item: project}) => (
             <Text style={styles.project}>{project.title}</Text>
           )}
-        /> */}
+        />
 
         <TouchableOpacity 
           activeOpacity={0.6} 
