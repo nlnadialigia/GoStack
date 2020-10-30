@@ -1,6 +1,6 @@
 <h1 align="center">Front-end com ReactJS</h1>
 <p align="center">
-  <img src="assets/logo.jpg" width="300" heigth="300">
+  <img src="../assets/logo.jpg" width="300" heigth="300">
 </p>
 
 
@@ -18,6 +18,7 @@ ___
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
   <a href="#book-aulas">Aulas</a>&nbsp;|&nbsp;
   <a href="#rocket-tecnologias-frameworks-dependencias">Tecnologias</a>&nbsp;|&nbsp;
+  <a href="#links">Baixar projeto</a>&nbsp;|&nbsp;
   <a href="#licença">Licença</a>
 </h3>
 
@@ -28,7 +29,7 @@ ___
 
 ## :information_source: Sobre
 
-Módulo com os primeiros conceitos do Node.js e aplicação na construção da primeira aplicação backend.
+Desenvolvimento a aplicação web e conexão com o backend.
 
 ## :book: Aulas
 
@@ -36,11 +37,11 @@ Módulo com os primeiros conceitos do Node.js e aplicação na construção da p
 
 ### Conceitos ReactJS
 
-Nessa aula foram abordados conceitos de React, sobre SPA (Single-page Applications), como funciona um componente e o conceito de componentização, divisão de responsabilidades entre front-end e back-end, programação imperativa vs programação declarativa, Babel, Webpack.
+Conceituação de React, sobre SPA (Single-page Applications), como funciona um componente e o conceito de componentização, divisão de responsabilidades entre front-end e back-end, programação imperativa vs programação declarativa, Babel, Webpack.
 
 <br>
 
-### Conceitos API rest
+### Configurando Babel
 
 Criação dos primeiros códigos da aplicação em React do total zero, configurando o Babel para converter o código da nossa aplicação em um código que o Browser vai entender. Vamos entender um pouquinho sobre os loaders do Webpack.
 
@@ -158,17 +159,37 @@ Cadastro de novos projetos no banco de dados, mantendo-os salvos na nossa aplica
 
 
 <br>
+
+## :link: Como baixar o projeto 
 <br>
 
-## :link: Como contribuir 
+```js
+// Clonar repositório
+$ git clone https://github.com/nlnadialigia/GoStack-N1.git
+```
 
-- Faça um Fork do repositório
-- Clone o seu repositório
-- Crie uma branch com a sua feature
-- Faça um commit com suas mudanças
-- 'Push' a sua branch
-- Ir em Pull Requests do projeto original e criar uma pull request com o seu commit
-<br>
+**Back-end** 
+```JS
+// Colocar o servidor para rodar pelo TERMINAL:
+$ cd GoStack-N1/backend
+
+$ yarn
+
+$ yarn dev
+```
+
+**Front-end**
+```js
+// Acessar diretório
+$ cd GoStack-N1/frontend
+
+// Instalar dependências
+$ yarn
+
+// Iniciar projeto
+$ yarn dev
+```
+
 <br>
 
 ## Licença 

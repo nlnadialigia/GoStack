@@ -1,6 +1,6 @@
 <h1 align="center">Back-end com Node.js</h1>
 <p align="center">
-  <img src="assets/logo.jpg" width="300" heigth="300">
+  <img src="../assets/logo.jpg" width="300" heigth="300">
 </p>
 
 
@@ -18,6 +18,7 @@ ___
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
   <a href="#book-aulas">Aulas</a>&nbsp;|&nbsp;
   <a href="#rocket-tecnologias-frameworks-dependencias">Tecnologias</a>&nbsp;|&nbsp;
+  <a href="#links">Baixar projeto</a>&nbsp;|&nbsp;
   <a href="#licença">Licença</a>
 </h3>
 
@@ -36,63 +37,126 @@ Módulo com os primeiros conceitos do Node.js e aplicação na construção da p
 
 ### Conceitos Nodejs
 
-Nessa aula nós começamos nossa jornada pelo Backend. Vamos entender o que são o Node.js, npm e Yarn, para que eles servem, porque os utilizamos, suas vantagens e diversos conceitos por trás deles. Dentre os diversos assuntos que temos aqui nessa aula, você vamos falar um poquinho sobre arquitetura Event-loop, single-thread, non-blocking I/O, Call Stack, ExpressJS entre diversos outros conceitos para você entender mais a fundo as tecnologias que iremos utilizar nas aulas que estão por vir.
+- Entendimento sobre os conceitos de Node.js, npm e Yarn, para que eles servem, porque os utilizamos, suas vantagens e diversos conceitos por trás deles. 
+- Explanação sobre arquitetura Event-loop, single-thread, non-blocking I/O, Call Stack, ExpressJS entre diversos outros conceitos.
 
 <br>
 
 ### Conceitos API rest
 
-Nessa aula veremos, na teoria, o funcionamento de uma API REST, uma das formas de lidar com o fluxo de requisição e resposta no seu backend. Falaremos principalmente sobre métodos HTTP, recursos e rotas, tipos de parâmetros, benefícios da API em relação à clássica MVC, estrutura de dados JSON e HTTP Codes. Com esses conhecimentos, podemos partir para a prática e começar a codar.
+- Teoria sobre o funcionamento de uma API REST => uma das formas de lidar com o fluxo de requisição e resposta no seu backend. 
+- Explanação sobre métodos HTTP, recursos e rotas, tipos de parâmetros, benefícios da API em relação à clássica MVC, estrutura de dados JSON e HTTP Codes.
 
 <br>
 
 ### Criando Projeto com Node
 
-Na nossa primeira aula prática vamos começar criando nosso primeiro projeto node. Veremos como iniciar um projeto, instalar o ExpressJS, instanciar nosso primeiro servidor na porta 3333, realizar uma requisição GET e retornar nossa primeira resposta em JSON.
+- Criação do projeto node
+- Definição da porta do servidor
+- Requisição GET com resposta JSON
 
 <br>
 
 ### Configurando Nodemon
 
-Veremos como instalar e configurar o Nodemon para que ele aplique essas alterações automaticamente e assim ajude na nossa produtividade no ambiente de desenvolvimento.
+- Instalação e configuração do Nodemon para que ele aplique essas alterações automaticamente e assim ajude na nossa produtividade no ambiente de desenvolvimento.
+
+- A execução do Nodemon pode ser realizada de várias formas:
+
+  **Direto**
+
+  ```bash
+  yarn nodemon src/index.js
+  ```
+
+  **Com alteração do package.json**
+
+  ```json
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  }
+  ```
+
+  ou
+
+  ```json
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon"
+  }
+  ```
+
+  ```bash
+  yarn dev
+  ```
 
 <br>
 
 ### Métodos HTTP
 
-Apresentaremos novamente sobre as peculiaridades de cada um enquanto criamos as rotas com os 4 principais métodos (GET, POST, PUT e DELETE). Deixaremos o código preparado para que possamos realizar os testes com o Insomnia na próxima aula.
+- Peculiaridades de cada método
+- Criação das rotas com os 4 principais métodos: GET, POST, PUT, DELETE
+- Considerações sobre os métodos:
+  
+  - **GET** ⇒ buscar informações
+  
+  - **POST** ⇒ criar informação
+  
+  - **PUT/PATCH** ⇒ alterar informação, no primeiro caso completo e no segundo alguma informação específica
+  
+  - **DELETE** ⇒ deletar informação
+  
+  - Rotas de métodos diferentes podem ter o mesmo nome
+  
+  - Rotas dos métodos **PUT** e **DELETE** devem informar o parâmetro a qual se referem
 
 <br>
 
 ### Utilizando Insomnia
 
-Nessa aula iremos começar instalando o Insomnia que é uma ferramenta incrível para nos auxiliar a debugar APIs. Também apresentaremos softwares alternativos caso você prefira e o passo a passo para instalar o tema Dracula. Com o aplicativo instalado, vamos aprender a criar sub environments, montar as requisições para testar as rotas com os 4 métodos HTTP e executá-las para visualizar o retorno em JSON de cada uma delas.
+- Instalação do [Insomnia](https://insomnia.rest/) => ferramenta para nos auxiliar a debugar APIs. 
+- Criação de *sub environments*
+- Montagem das requisições para testar as rotas com os 4 métodos HTTP e executá-las para visualizar o retorno em JSON de cada uma delas.
 
-Baixe aqui o Insomnia.
-
-Alternativas para sistemas 32bits:
-
-Postman;
-
-Hoppscotch.
+- Alternativas para sistemas 32bits:
+  
+  - [Postman](https://www.postman.com/)
+  
+  - [Hoppscotch](https://hoppscotch.io/pt-br)
 
 <br>
 
 ### Tipos de parâmetros
 
-Vamos aplicar na prática os três tipos de parâmetros: Query Params, Route Params e Request Body. Veremos principalmente como enviá-los pelo Insomnia, como configurar o servidor para recebê-los, como utilizá-los no código e quais parâmetros devem ser utilizados em cada rota.
+**Query Params**
+- Filtros e paginação
+- Utilizado no método GET
+
+**Route Params**
+- Identificar recursos na hora de atualizar ou deletar
+- Rotas do tipo PUT e DELETE
+
+**Request Body**
+- Conteúdo na hora de criar ou editar um recurso (JSON)
+- Rotas do tipo POST e PUT
+
+**Exemplo realizado**
+- Envio dos parâmetros pelo Insomnia
+- Configuração do servidor para receber os dados
 
 <br>
 
 ### Aplicação Funcional
 
-Agora chegou a hora de utilizar os conhecimentos obtidos nas aulas anteriores para montar uma aplicação funcional onde iremos listar, cadastrar, atualizar e deletar projetos. Serão aplicados os 4 métodos HTTP (GET, POST, PUT e DELETE) e os 3 tipos de parâmetros (Query, Route e Body). Também iremos gerenciar os projetos diretamente na memória do servidor utilizando arrays, utilizar o uuid como identificador único de cada projeto e retornar manualmente um HTTP Status Code que melhor condiz com a resposta do servidor.
+- Montagem de uma aplicação funcional onde serão listados, cadastrados, atualizados e deletados projetos.
+- Aplicação dos 4 métodos HTTP e os 3 tipos de parâmetros.
+- Gerenciamento dos projetos diretamente na memória do servidor, utilizando arrays.
 
 <br>
 
 ### Middlewares
 
-Para finalizar esse módulo, iremos falar sobre middlewares e sua importância nas aplicações que iremos utilizar durante o restante do bootcamp. Serão apresentados o formato do middleware, os seus parâmetros, formas de aplicá-los no código e como utilizá-lo para alterar o fluxo das requisições. Tudo isso utilizando exemplos práticos como o log de todas as requisições feitas para o servidor e a verificação se o id do projeto é um uuid.
+- Definição do que são middlewares e sua importância nas aplicações. - - Apresentação do formato do middleware, os seus parâmetros, formas de aplicá-los no código e como utilizá-lo para alterar o fluxo das requisições. 
 
 <br>
 <br>
@@ -105,19 +169,25 @@ Para finalizar esse módulo, iremos falar sobre middlewares e sua importância n
 - [uuidv4](https://www.npmjs.com/package/uuidv4)
 - [Cors](https://www.npmjs.com/package/cors)
 
-
-<br>
 <br>
 
-## :link: Como contribuir 
-
-- Faça um Fork do repositório
-- Clone o seu repositório
-- Crie uma branch com a sua feature
-- Faça um commit com suas mudanças
-- 'Push' a sua branch
-- Ir em Pull Requests do projeto original e criar uma pull request com o seu commit
+## :link: Como baixar o projeto 
 <br>
+
+```js
+// Clonar repositório
+$ git clone https://github.com/nlnadialigia/GoStack-N1.git
+
+// Acessar diretório
+$ cd GoStack-N1/backend
+
+// Instalar dependências
+$ yarn
+
+// Iniciar projeto
+$ yarn dev
+```
+
 <br>
 
 ## Licença 
