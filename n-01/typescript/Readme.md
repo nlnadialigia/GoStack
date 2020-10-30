@@ -1,6 +1,6 @@
 <h1 align="center">Typescript</h1>
 <p align="center">
-  <img src="../assets/logo.jpg" width="300" heigth="300">
+  <img src="../../assets/logo.jpg" width="300" heigth="300">
 </p>
 
 
