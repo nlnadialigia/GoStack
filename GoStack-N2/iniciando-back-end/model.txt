@@ -5,13 +5,14 @@ export default class CreateAppointments1604510187284
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'apointments',
+        name: 'appointments',
         columns: [
           {
             name: 'id',
             type: 'varchar',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4( )',
           },
           {
             name: 'provider',

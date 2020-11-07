@@ -5,7 +5,10 @@
   "username": "postgres",
   "password": "151044",
   "database": "gostack_gobarber",
-  "migrations": [
+	"entities": [
+		"./src/models/*.ts"
+	],
+	"migrations": [
 		"./src/database/migrations/*.ts"
 	],
 	"cli": {
