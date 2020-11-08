@@ -7,16 +7,20 @@ import CreateAppointmentService from '../services/CreateAppointmentService';
 const appointmentsRouter = Router();
 
 appointmentsRouter.post('/', async (request, response) => {
-  const { provider, date } = request.body;
-  const parsedDate = parseISO(date);
-  const createAppointment = new CreateAppointmentService();
+  try {
+    const { provider_id, date } = request.body;
+    const parsedDate = parseISO(date);
+    const createAppointment = new CreateAppointmentService();
 
-  const appointment = await createAppointment.execute({
-    provider,
-    date: parsedDate,
-  });
+    const appointment = await createAppointment.execute({
+      provider_id,
+      date: parsedDate,
+    });
 
-  return response.json(appointment);
+    return response.json(appointment);
+  } catch (err) {
+    return response.status(400).json({ error: err.message })
+  }
 });
 
 appointmentsRouter.get('/', async (request, response) => {

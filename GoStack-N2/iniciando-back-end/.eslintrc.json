@@ -3,7 +3,6 @@
       "es2020": true,
       "node": true
   },
-  /* eslint-disable class-methods-use-this */
   "extends": [
       "airbnb-base",
       "plugin:@typescript-eslint/recommended",
@@ -28,7 +27,10 @@
       }
     ],
     "prettier/prettier": "error",
-    "class-methods-use-this":"off"
+    "class-methods-use-this":"off",
+    "camelCase": {
+      "properties": "never"
+    }
   },
   "settings": {
     "import/resolver": {
