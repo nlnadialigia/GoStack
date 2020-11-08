@@ -29,7 +29,7 @@
     "prettier/prettier": "error",
     "class-methods-use-this":"off",
     "camelCase": {
-      "properties": "never"
+      "properties": "off"
     }
   },
   "settings": {
