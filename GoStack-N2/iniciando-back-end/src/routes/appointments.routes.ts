@@ -7,7 +7,7 @@ import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const appointmentsRouter = Router();
 
-appointmentsRouter.use(ensureAuthenticated)
+appointmentsRouter.use(ensureAuthenticated);
 
 appointmentsRouter.post('/', async (request, response) => {
   try {
@@ -22,7 +22,7 @@ appointmentsRouter.post('/', async (request, response) => {
 
     return response.json(appointment);
   } catch (err) {
-    return response.status(400).json({ error: err.message })
+    return response.status(400).json({ error: err.message });
   }
 });
 
