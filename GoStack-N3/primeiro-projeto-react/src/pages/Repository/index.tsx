@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const Repository: React.FC = () => (
-  <h1>Repository</h1>
-)
+const Repository: React.FC = () => <h1>Repository</h1>;
 
-export default Repository
+export default Repository;
