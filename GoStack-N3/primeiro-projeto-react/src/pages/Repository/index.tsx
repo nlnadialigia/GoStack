@@ -80,16 +80,18 @@ const Repository: React.FC = () => {
         </RepositoryInfo>
       )}
       <RepositoryIssues>
-        <a
-          key="abc"
-          href="teste"
-        >
-          <div>
-            <strong>nome repositorio</strong>
-            <p>autor</p>
-          </div>
-          <FiChevronRight size={20} />
-        </a>
+        {issues.map((issue) => (
+          <a
+            key={issue.id}
+            href={issue.html_url}
+          >
+            <div>
+              <strong>{issue.title}</strong>
+              <p>{issue.user.login}</p>
+            </div>
+            <FiChevronRight size={20} />
+          </a>
+        ))}
       </RepositoryIssues>
     </>
   );

@@ -50,6 +50,98 @@ create-react-app nome-do-projeto --template=typescript
 
 ##  :sparkles: Criando a Aplicação
 
+<br>
+
+### :pushpin: Criando Rotas
+
+Configuração da dependência responsável por lidar com as rotas da aplicação, que é o que define qual página será mostrada em tela, qual endereço deve ser exibido na barra do navegador, etc.
+
+Essa dependência é a `react-router-dom`.
+
+Para adicionar ao seu projeto:
+
+```bash
+yarn add react-router-dom
+```
+
+Para adicionar as tipagens:
+
+```bash
+yarn add -D @types/react-router-dom
+```
+<br>
+
+### :pushpin: Utilizando Styled Components
+
+Styled-components é uma forma de fazer as estilizações como se fossem
+componentes customizados
+
+Esse pacote pode ser utilizando tanto em projetos ReactJS quanto em projetos React Native sem mudar praticamente nada, ou seja, com uma mínima curva de aprendizado.
+
+<br>
+
+### :pushpin: Estilizando Dashboard
+
+Desenvolvimento da parte estrutural e visual da primeira tela do GitHub Explorer que é o Dashboard, aplicando mais conceitos do styled-components e entendendo na prática como funcionam as estilizações que se aplicam apenas em um componente.
+
+<br>
+
+### :pushpin: Conectando a API
+
+Consumo da API do GitHub para exibir informações reais na aplicação.
+
+Para isso, será utilizado um API Client (Axios) no nosso front-end, que é o pacote responsável por fazer todas as requisições que a aplicação
+precisar.
+
+**Configurando o Axios**
+
+Para adicionar o pacote ao seu projeto:
+
+```bash
+yarn add axios
+```
+
+Arquivo *api.ts*:
+
+```jsx
+import axios from 'axios';
+
+const api = axios.create({
+	baseURL: 'https://api.github.com',
+});
+
+export default api;
+```
+
+<br>
+
+### :pushpin: Lidando com erros
+
+Configuração da tratativa de erros para o caso de um usuário buscar por um repositório que não existe ou digitar uma entrada inválida no input de texto, exibindo uma mensagem e alterando o estilo do nosso formulário.
+
+<br>
+
+### :pushpin: Salvando no Storage
+
+Utilização do storage do navegador para persistir os dados de repositórios buscados pela nossa aplicação. Dessa forma, mesmo ao recarregar a página, o estado das informações buscadas não será perdido.
+
+<br>
+
+### :pushpin: Navegando entre rotas
+
+Utilização do *react-router-dom* para fazer a navegação entre telas, e, assim que o usuário clicar em um repositório, ele ser redirecionado para uma página de detalhes.
+
+<br>
+
+### :pushpin: Estilizando Detalhe
+
+ Construção da página de detalhes do GitHub Explorer, fazendo a estrutura e a estilização, aplicando os mesmos conceitos aprendidos anteriormente para construir o dashboard.
+
+<br>
+
+### :pushpin: Listando issues da API
+
+ Utilização dos conceitos de conexão de API na página de detalhes do GitHub Explorer, fazendo a estrutura e a estilização, aplicando os mesmos conceitos aprendidos anteriormente para construir o dashboard.
 
 <br>
 
@@ -57,8 +149,12 @@ create-react-app nome-do-projeto --template=typescript
 
 - [ReactJs](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [Styled-components](https://styled-components.com/)
+- [React-icons](https://www.npmjs.com/package/react-icons)
+- [Polished](https://github.com/styled-components/polished)
+- [Axios](https://www.npmjs.com/package/axios)
+
 
 <br>
 
@@ -80,6 +176,16 @@ $ yarn
 $ yarn start
 ```
 
+### :pushpin: Considerações Finais
+
+Projeto estrutura com [Eslint](https://eslint.org/) e [Prettier](https://prettier.io/). Para que não haja conflito entre as configurações é necessária a remoção da extensão Prettier do VSCode, caso a mesma esteja instalada.
+
+**Configuração nas Settings(JSON)**
+```json
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+}
+```
 <br>
 
 ## Licença
