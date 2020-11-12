@@ -27,6 +27,7 @@ export const Form = styled.form<FormProps>`
     border-radius: 5px 0 0 5px;
     border: 3px solid #FFFFFF;
     border-right: 0;
+    outline:none;
 
     ${(props) => props.hasError && css`
     border-color: #C53030;
@@ -34,6 +35,10 @@ export const Form = styled.form<FormProps>`
 
     &::placeholder{
       color: #A8A8B3;
+    }
+
+    &:focus{
+      outline:1px solid #bbbfca;
     }
   }
   
@@ -49,6 +54,10 @@ export const Form = styled.form<FormProps>`
 
     &:hover{
      background: ${shade(0.2, '#04D361')} 
+    }
+
+    &:focus{
+      outline:none;
     }
   }
 `;
@@ -71,12 +80,17 @@ export const Repositories = styled.div`
     background: #FFFFFF;
     padding: 16px;
     border-radius:5px;
+    transition: transform 0.2s;
 
     display: flex;
     align-items: center;
 
     & + a{
       margin-top: 16px;
+    }
+
+    &:hover{
+      transform: translate(10px);
     }
 
     img{
