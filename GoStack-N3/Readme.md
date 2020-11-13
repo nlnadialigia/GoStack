@@ -30,8 +30,8 @@ Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 ## :book: Módulos
 
 - [Primeiro Projeto com React](primeiro-projeto-react)
-<!-- - [Iniciando Front-end Web](iniciando-front-end-web)
-- [Iniciando Aplicativo Mobile](iniciando-aplicativo-mobile) -->
+- [Iniciando Front-end Web](gobarber-web)
+<!-- - [Iniciando Aplicativo Mobile](iniciando-aplicativo-mobile) -->
 
 <br>
 
