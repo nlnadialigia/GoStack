@@ -20,7 +20,7 @@ const SignUp: React.FC = () => {
         name: Yup.string().required('Nome obrigatório'),
         email: Yup.string()
           .required('Email obrigatório')
-          .email('Digite email válido'),
+          .email('Digite e-mail válido'),
         password: Yup.string().min(6, 'Mínimo de 6 dígitos'),
       });
 
@@ -28,11 +28,8 @@ const SignUp: React.FC = () => {
         abortEarly: false,
       });
     } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationErrors(err);
-
-        formRef.current?.setErrors(errors);
-      }
+      const errors = getValidationErrors(err);
+      formRef.current?.setErrors(errors);
     }
   }, []);
 
@@ -43,7 +40,7 @@ const SignUp: React.FC = () => {
         <img src={logoImg} alt="GoBarber" />
         <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Faça seu cadastro</h1>
-          <Input name="nome" icon={FiUser} placeholder="Nome" />
+          <Input name="name" icon={FiUser} placeholder="Nome" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
           <Input
             name="password"
