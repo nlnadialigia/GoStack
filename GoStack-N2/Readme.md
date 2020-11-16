@@ -30,7 +30,7 @@ Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 ## :book: Módulos
 
 - [Primeiro projeto com Node.JS](primeiro-projeto-node)
-- [Iniciando Back-end](iniciando-back-end)
+- [Iniciando Back-end](gobarber-api)
 
 <br>
 
