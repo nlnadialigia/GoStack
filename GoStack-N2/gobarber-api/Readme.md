@@ -1,4 +1,4 @@
-<h1 align="center">Primeiro porjeto com Node.JS</h1>
+<h1 align="center">GoBarber Api</h1>
 <p align="center">
   <img src="../../assets/logo.jpg" width="300" heigth="300">
 </p>
