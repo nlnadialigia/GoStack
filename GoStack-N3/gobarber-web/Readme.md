@@ -143,19 +143,51 @@ Utilziação dos mesmos conceitos de validação do formulário de cadastro no f
 
 ## :sparkles: Autenticação
 
+<br>
+
 ### :pushpin: Habilitando CORS na API
+
+Conexão da aplicação com a parte da API que já foi desenvolvida. 
+Necessária a instalção, na API, do pacote de segurança chamado CORS. É ele quem define qual site pode acessar a aplicação.
+
+```bash
+yarn add cors 
+```
+
+<br>
 
 ### :pushpin: API de Contexto
 
-### :pushpin: Guia de Hooks e Context API
+Adição da funcionalidade do React => *Context API* (ou API de Contexto).
+
+Essa API é muito útil quando queremos que um estado seja compartilhado entre um ou mais componentes que não estejam diretamente conectados, ou seja, onde não há a possibilidade de passar esse estado por dentro de um componente pai para um componente filho.
+
+<br>
 
 ### :pushpin: Login pelo Contexto
 
+Isolamento do contexto de autenticação, deixando as funções relacionadas diretamente à esse contexto no mesmo arquivo que
+ele para que nós não precisemos "sujar" o componente *App*.
+
+Configuração do axios para que seja possível realizar as requisições do front-end à nossa API.
+
+<br>
+
 ### :pushpin: Mantendo usuário no storage
+
+Persistência dos dados do usuário logado no storage do navegador. Isso irá permitir que a aplicação mantenha sempre o usuário logado desde que o token esteja válido, tirando assim, a necessidade de fazer um novo login a cada vez que a aplicação for acessada.
+
+<br>
 
 ### :pushpin: Criando hook useAuth
 
+Criação de hook próprio que será responsável por retornar os métodos de autenticação e as informações salvas no estado do contexto. Dessa forma fica muito mais fácil manipular o estado e as funções do contexto de qualquer lugar da nossa aplicação.
+
+<br>
+
 ### :pushpin: Logout da aplicação
+
+ Implementação da função responsável por deslogar o usuário, ou seja, excluir os dados salvos no storage e estado do contexto.
 
 <br>
 
@@ -199,6 +231,7 @@ Utilziação dos mesmos conceitos de validação do formulário de cadastro no f
 - [Polished](https://github.com/styled-components/polished)
 - [Unform](https://www.npmjs.com/package/@rocketseat/unform)
 - [Yup](https://www.npmjs.com/package/yup)
+- [Cors](https://www.npmjs.com/package/cors)
 
 
 
