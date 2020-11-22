@@ -197,13 +197,30 @@ Criação de hook próprio que será responsável por retornar os métodos de au
 
 ## :sparkles: Mensagem de toast
 
+Toasts são mensagens pop-up adicionadas para exibir uma mensagem a um usuário. Pode ser uma mensagem de sucesso, mensagem de aviso ou uma mensagem personalizada. 
+
+<br>
+
 ### :pushpin: Estrutura de Toasts
+
+Criação da estrutura e estilização para os três tipos de Toast que serão usados: sucesso, alerta e erro.
+<br>
 
 ### :pushpin: Criando hook de toast
 
+Construção um hook para que a utilização de toasts seja dinâmica de acordo com o que nossa aplicação precisar exibir e remover da tela. Para isso serão aplicados os mesmos conceitos de contexto usados anteriormente com a autenticação do usuário.
+
+<br>
+
 ### :pushpin: Adicionando e removendo Toasts
 
+Implementação das funções de adição e remoção de um toast em tela que, até então, estão vazias e aplicação de uma funcionalidade para que o toast seja excluído automaticamente após um certo tempo mesmo que o usuário não clique no botão de fechar.
+
+<br>
+
 ### :pushpin: Animando Toasts
+
+Aplicação de efeitos de transição na adição e remoção de um toast usando o pacote de animações `react-spring`. Isso irá fazer com que os toasts tenham um efeito mais "leve" ao aparecerem ou serem removidos.
 
 <br>
 
@@ -213,11 +230,23 @@ Criação de hook próprio que será responsável por retornar os métodos de au
 
 ## :sparkles: Rotas da aplicação
 
+<br>
+
 ### :pushpin: Configurando Rotas
+
+Configuração do pacote react-router-dom na aplicação, para que ela consiga fazer a troca de páginas, e adição de algumas animações nas páginas da aplicação.
+
+<br>
 
 ### :pushpin: Rotas autenticadas
 
+Implementação do controle de rotas para que o usuário, por exemplo, acesse o dashboard apenas se ele já estiver autenticado. Caso o contrário, ele deve ser redirecionado à página de login.
+
+<br>
+
 ### :pushpin: Finalizando App
+
+Finalização do App com a implementação nas páginas de signIn e signUp das mensagens Toast de sucesso quando da autenticação.
 
 <br>
 
@@ -232,6 +261,8 @@ Criação de hook próprio que será responsável por retornar os métodos de au
 - [Unform](https://www.npmjs.com/package/@rocketseat/unform)
 - [Yup](https://www.npmjs.com/package/yup)
 - [Cors](https://www.npmjs.com/package/cors)
+- [Uuid](https://www.npmjs.com/package/uuid)
+- [React-spring](https://www.react-spring.io)
 
 
 
