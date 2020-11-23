@@ -138,7 +138,7 @@ Um service é a parte do código que possui toda a regra de negócio necessária
 $ git clone https://github.com/nlnadialigia/GoStack.git
 
 // Acessar diretório
-$ cd GoStack/GoStack-N2/meu-primeiro-projeto
+$ cd GoStack/GoStack-N2/gobarber-api
 
 // Instalar dependências
 $ yarn

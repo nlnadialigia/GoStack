@@ -31,7 +31,7 @@ Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 
 - [Primeiro Projeto com React](primeiro-projeto-react)
 - [Iniciando Front-end Web](gobarber-web)
-<!-- - [Iniciando Aplicativo Mobile](iniciando-aplicativo-mobile) -->
+- [Iniciando Aplicativo Mobile](appgobarber)
 
 <br>
 
