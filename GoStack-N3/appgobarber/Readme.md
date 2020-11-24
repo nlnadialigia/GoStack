@@ -35,13 +35,17 @@ Criação da versão mobile da aplicação GoBarber.
 
 # :book: Aulas
 
-## :sparkles: Estrutura das páginas
+## :sparkles: Estrutura e padrões
 
 <br>
 
-### :pushpin: 
+### :pushpin: Configurando estrutura
 
+Criação do projeto utiliando o CLI do React Native configuração do Eslint, Prettier e EditorConfig.
 
+```bash
+npx react-native init appgobarber --template react-native-template-typescript
+```
 
 <br>
 
@@ -49,13 +53,39 @@ Criação da versão mobile da aplicação GoBarber.
 
 <br>
 
-<img src="../../assets/figma.png" width="400">
+<img src="../../assets/figma-mobile.png" width="400">
 
 <br><br>
 
-### :pushpin: 
+### :pushpin: Configurando StatusBar
 
+Configuração da statusbar da aplicação de forma bastante simples para que se aplique em todas as telas do GoBarber.
 
+<br>
+
+### :pushpin: Configuração de navegação
+
+Configuração das duas primeiras páginas da aplicação que são as páginas de login e cadastro já com o *styled-components* que também será utilizado no mobile.
+
+Na configuração da navegação na aplicação será utilizado o *[react-navigation](https://reactnavigation.org/docs/getting-started).*
+
+<br>
+
+### :pushpin: Importando fontes externas
+
+Configuração e utilização de fontes externas no aplicativo.
+
+<br>
+
+## :sparkles: Autenticação e cadastro
+
+<br>
+
+### :pushpin:
+
+<br>
+
+### :pushpin:
 
 <br>
 
