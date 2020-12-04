@@ -6,11 +6,10 @@
   "password": "151044",
   "database": "gostack_gobarber",
 	"entities": [
-    "src/modules/appointments/infra/entities/*.ts",
-    "src/modules/users/infra/entities/*.ts"
+		"./src/models/*.ts"
 	],
 	"migrations": [
-		"src/shared/infra/typeorm/migrations/*.ts"
+		"./src/database/migrations/*.ts"
 	],
 	"cli": {
 		"migrationsDir": "./src/database/migrations"

@@ -7,7 +7,7 @@ import {
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import User from '@modules/users/infra/entities/User';
+import User from './User';
 
 @Entity('appointments')
 class Appointment {

@@ -24,7 +24,6 @@
     "no-useless-constructor": "off",
     "no-unused-vars": "off",
     "camelcase": "off",
-    "@typescript-eslint/interface-name-prefix": ["error", {"prefixWithI": "always"}],
   "@typescript-eslint/no-unused-vars": [
     "warn",
     {
