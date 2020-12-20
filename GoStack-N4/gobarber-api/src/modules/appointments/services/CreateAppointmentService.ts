@@ -1,23 +1,22 @@
 /* eslint-disable class-methods-use-this */
-import AppError from '@shared/errors/AppError';
 import { startOfHour } from 'date-fns';
 import { getCustomRepository } from 'typeorm';
+import AppError from '@shared/errors/AppError';
 import Appointment from '../infra/typeorm/entities/Appointment';
-import AppointmentsRepository from '../infra/typeorm/repositories/AppointmentsRepository';
-import IAppointmentRepository from '../repositories/IAppointmentsRepository';
+import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
-interface IRequest {
+interface Request {
   provider_id: string;
   date: Date;
 }
 
 class CreateAppointmentSevices {
-  constructor(private appointmentsRepository: IAppointmentRepository) { }
+  public async execute({ provider_id, date }: Request): Promise<Appointment> {
+    const appointmentsRepository = getCustomRepository(AppointmentsRepository);
 
-  public async execute({ provider_id, date }: IRequest): Promise<Appointment> {
     const appointmentDate = startOfHour(date);
 
-    const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
+    const findAppointmentInSameDate = await appointmentsRepository.findByDate(
       appointmentDate,
     );
 
@@ -25,10 +24,12 @@ class CreateAppointmentSevices {
       throw new AppError('This appointment is already booked');
     }
 
-    const appointment = await this.appointmentsRepository.create({
+    const appointment = appointmentsRepository.create({
       provider_id,
       date: appointmentDate,
     });
+
+    await appointmentsRepository.save(appointment);
 
     return appointment;
   }
