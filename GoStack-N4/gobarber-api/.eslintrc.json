@@ -24,12 +24,18 @@
     "no-useless-constructor": "off",
     "no-unused-vars": "off",
     "camelcase": "off",
-  "@typescript-eslint/no-unused-vars": [
-    "warn",
-    {
-      "argsIgnorePattern": "^_"
-    }
-  ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      {
+        "prefixWithI": "always"
+      }
+    ],
     // "@typescript-eslint/naming-convention": [
     //   "error",
     //   {
@@ -38,7 +44,7 @@
     //     "format": ["PascalCase"]
     //   }
     // ],
-    "class-methods-use-this":"off",
+    "class-methods-use-this": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
