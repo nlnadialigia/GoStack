@@ -1,4 +1,4 @@
-<h1 align="center">GoBarber Api</h1>
+<h1 align="center">Arquitetura e DDD</h1>
 <p align="center">
   <img src="../../assets/logo.jpg" width="300" heigth="300">
 </p>
@@ -29,123 +29,95 @@ ___
 
 ## :information_source: Sobre
 
-Criação de projeto node com typescript para ensinamento dos principais conceitos.
+Módulo dedicado aos princípios da programação, arquitetura de software dentro do back-end que vai fazer a nossa aplicação ser escalável, assim como testes automatizados e a metodologia TDD (Test-Driven Development).
+
 
 ## :book: Aulas
 
-### Configurando estrutura
+### Conceitos DDD e TDD
 
-Configuração do primeiro projeto Node + TypeScript do zero e aprendizado sobre as ferramentas utilizadas no projeto.
-<br>
+Recapitulação de tudo que já foi feito até agora no back-end e entendimento de como está organizada a estrutura do projeto para então partir para uma nova estrutura seguindo o **DDD** (Domain Driven Design) que são boas práticas a serem utilizadas ao longo do desenvolvimento, onde cada domínio é responsável por uma parte diferente da aplicação.
 
-### Debugando NodeJS
+Além disso foi visto o conceito de **TDD** (Test-Driven Development) que é quando criamos um teste antes de criar a funcionalidade.
 
-Configuração e uso do debugger do VSCode, que perminite o monitoramento das variáveis que estão entrando e saindo e quais valores armazenam.
+### Separando em módulos
 
-*Gerando o arquivo launch.json*
-Ao clicar em create a launch.json file, você será direcionado a escolher uma opção entre:
+Maior separação das responsabilidades da nossa aplicação com base no domínio, ou seja, a área de conhecimento que cada arquivo está relacionado.
 
-Chrome (preview); Edge: Launch; Node.js; Node.js (preview); More...
+### Camada Infra
 
-Escolha a opção Node.js.
+Continuando a separação de camadas da aplicação, foi aplicada a camada de infra e de domínio para cada arquivo da aplicação que se encaixe na categoria definida.
 
-*Arquivo package.json*
-Para que o debugger possa se conectar à nossa aplicação, é necessário que o comando dev:server esteja da seguinte maneira:
+**Camada de Infra** ⇒ ferramentas escolhidas para se relacionar com a camada de Domínio (regra de negócios).
+  - banco de dados
+  - express
+  - ferramenta utiliada para enviar o email
+  - Não interessa as ferramentas desde que a camada de Domínio não tenha conhecimento dessas ferramentas ⇒ responsável somente pelas regras de negócios.
 
+### Configurando Imports
+
+Configuração dos `imports` para que funcionem como antes, porém, para que os caminhos não fiquem muito longos e muito trabalhosos de digitar aqueles infinitos ../../. foi adicionada configuração no `tsconfig.json`.
 ```json
-"dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+"baseUrl": "./src",
+"paths": {
+  "@modules/*": ["modules/*"],
+  "@config/*": ["config/*"],
+  "@shared/*": ["shared/*"]
+}
 ```
-<br>
 
-### Layout da Aplicação
+### Liskov Substitution Principle
 
-Preview de como ficará a aplicação GoBarber Web e Mobile ao final do bootcamp.
+Maior isolamento dos arquivos que ainda dependem de alguma forma da camada de infra, fazendo com que dependam apenas de uma interface. Isso permite fazer uma melhor manutenção do código ou até trocar o ORM utilizado pela aplicação sem que a aplicação seja afetada.
 
-Apresentação boa parte dos conceitos necessários para desenvolvermos qualquer projeto.
+### Reescrevendo Repositórios
 
-<br>
+Reescritura dos métodos dos repositórios para que se tenha mais controle sobre eles, como por exemplo, quais parâmetros recebe e qual o tipo de retorno.
 
-### Cadastro de Agendamento
+Tudo isso foi feito baseado na interface do repositório e não no repositório em si. Isso nos permite ter uma maior flexibilidade com o código.
 
- Estruturação do nosso projeto, separação das pastas em suas responsabilidades, divisão do código com o intuito de separar as responsabilidades para que possamos organizar melhor a nossa aplicação.
+### Dependency Inversion Principle
 
- <br>
+Aplicação de mais um dos conceitos do SOLID que é a *inversão de dependência*.
 
- ### Validando a data
+Ao invés do *service* lidar diretamente com o repositório importado no arquivo do *service*, esse mesmo repositório foi recebido como parâmetro do `constructor` desse *service* passando o tipo dele como sendo a `interface` criada anteriormente para implementar no próprio repositório.
 
-Aprendizado de como trabalhar com datas, validar os agendamentos, para não permitir que sejam cadastrados com horas quebradas e também não permitir que dois agendamentos sejam feitos na mesma data e horário.
+### Refatorando o módulo de usuários
 
-Tudo isso será feito utilizando a **date-fns**, que é uma biblioteca para lidar com datas dentro do JavaScript.
+ Refatoração do módulo de usuários para que ele siga a mesma estratégia de Dependency Inversion Principle feito anteriormente.
 
-<br>
+ ### Injeção de dependências
 
-### Model de Agendamento
+ Aplicação no projeto do pacote de injeção de dependências chamado [tsyringe](https://github.com/microsoft/tsyringe). Ele nos permite automatizar a injeção de dependências.
 
-Aplicação do conceito de model (ou entidade), com o intuito de isolar mais ainda as responsabilidades de cada parte do nosso código.
+Para instalar:
 
-**Model** é o formato de um dado que é armazenado em algum lugar da nossa aplicação, seja um banco de dados ou até mesmo a própria memória.
+```bash
+yarn add tsyringe
+```
 
-<br>
+ou:
 
-### Criando repositórios
+```bash
+npm install tsyringe
+```
 
-Aplicação do conceito de repositórios, visando ainda mais a organização e a estrutura dos nossos arquivos.
+### Usando controllers
 
-Um repositório é a conexão entre a persistência (um banco de dados por exemplo) e a nossa aplicação. É pelo repositório onde iremos buscar as informações no banco (ou onde estiver salva) e devolver para a aplicação.
+Refatoração da aplicação adicionando os controllers. Eles conterão todo o conteúdo que até então estava dentro das rotas, abstraindo ainda mais a responsabilidade de cada rota que é apenas repassar a requisição para o controller.
 
-<br>
-
-### Listando agendamentos
-
- Implementação da rota de listagem de agendamentos e apesar de não utilizarmos muita regra de negócio, você verá um pouco mais da utilidade do porquê usarmos os repositórios.
-
- <br>
-
- ### Trabalhando com dados
-
-Aplicação do conceito que será utilizado ao longo de todo o bootcamp que é o DTO (Data Transfer Object).
-
-Uma das melhores formas para transferir dados de um arquivo para outro no JavaScript/TypeScript é utilizando objetos, ainda mais se for um conjunto de informações como por exemplo o nome e e-mail de um usuário, pois assim é possível tipar e usar da desestruturação de objetos para nomear os parâmetros de uma função.
-
-<br>
-
-### Services & SOLID
-
-Aplicação de um dos conceitos mais importantes da arquitetura de software que é o service.
-
-Um service é a parte do código que possui toda a regra de negócio necessária para executar uma funcionalidade da aplicação como, por exemplo, criar um usuário, editar um dado, buscar informações no banco, etc. Você entenderá como esse padrão de arquitetura nos ajuda a organizar ainda mais a nossa aplicação e o porque de utilizar.
-
-<br>
-
-## :rocket: Tecnologias, Frameworks e Dependências
-
-- [NodeJS](https://nodejs.org/en/)
-- [ExpressJS](https://expressjs.com/pt-br/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [date-fns](https://date-fns.org/)
-- [uuid](https://www.npmjs.com/package/uuid)
-
-<br>
 
 # :link: Como baixar o projeto
-
-<br>
 
 ```js
 // Clonar repositório
 $ git clone https://github.com/nlnadialigia/GoStack.git
 
 // Acessar diretório
-$ cd GoStack/GoStack-N2/gobarber-api
+$ cd GoStack/GoStack-N4/gobarber-api
 
 // Instalar dependências
 $ yarn
-
-// Transpilar o projeto
-$ yarn tsc
-
 
 // Iniciar projeto
 $ yarn dev:sever
