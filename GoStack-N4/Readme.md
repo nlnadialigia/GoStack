@@ -29,7 +29,7 @@ Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 
 ## :book: Módulos
 
-- [Arquitetura de Testes](gobarber-api)
+- [Arquitetura de Testes](gobarber-api-at)
 <!-- - [Continuando back-end do app]() -->
 <!-- - [Finalizando o back-end do app]() -->
 
