@@ -1,7 +1,7 @@
 .idea/
 .vscode/
-build/
-temp/
 
+node_modules/
 tmp/*
 !tmp/.gitkeep
+coverage
