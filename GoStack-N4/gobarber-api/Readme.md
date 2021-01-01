@@ -26,13 +26,13 @@ ___
 <br>
 <br>
 
-## :information_source: Sobre
+# :information_source: Sobre
 
 Módulo para aprendizado de conceitos mais complexos do back-end da aplicação, como relacionamentos complexos, trabalhos em segundo plano, cacjhe, banco de dados não-relacionais e segurança.
 
-## :book: Aulas
+# :book: Aulas
 
-### :interrobang: Estrutura e Ajustes
+## :interrobang: Estrutura e Ajustes
 
 📌 **Mapeando features do sistema**
 
@@ -115,7 +115,7 @@ Mapeamento das features que ainda faltam serem implementadas e transcrição par
 
 ✨ **Referência:** [Utilizando UX para projetar uma aplicação do zero | Masterclass #09](https://www.youtube.com/watch?v=mxIhSTP6ddE)
 
-### :interrobang: Perfil do usuário
+## :interrobang: Perfil do usuário
 
 📌 **Aplicando TDD na prática**
 
@@ -161,7 +161,7 @@ Construção da parte de atualização do perfil de usuário, também seguindo a
 
 Conclusão da funcionalidade de atualização do perfil de um usuário adicionando a rota e o controller para que tudo possa funcionar normalmente com as requisições pelo insomnia e criação de um service e uma rota a mais que servirá para exibir as informações do perfil a serem editadas. Isso complementará a funcionalidade de atualização do perfil.
 
-### :interrobang: Agendamento
+## :interrobang: Agendamento
 
 📌 **Listagem de prestadores**
 
