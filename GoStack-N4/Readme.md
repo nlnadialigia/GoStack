@@ -32,7 +32,7 @@ Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 - **Arquitetura de Testes**
   - [Arquitetura e DDD](gobarber-api-ddd)
   - [Testes e TDD11](gobarber-api-tdd)
-<!-- - [Continuando back-end do app]() -->
+- [Continuando back-end do app](gobarber-api)
 <!-- - [Finalizando o back-end do app]() -->
 
 <br>
