@@ -199,16 +199,16 @@ Finalização de todas essas novas features de disponibilidade de mês e dia e c
 
 ``` js
 // Clonar repositório
-$ git clone https: //github.com/nlnadialigia/GoStack.git
+$ git clone https: github.com/nlnadialigia/GoStack.git
 
 // Acessar diretório
-$ cd GoStack / GoStack-N4 / gobarber-api
+$ cd GoStack/GoStack-N4/gobarber-api
 
 // Instalar dependências
 $ yarn
 
 // Iniciar projeto
-$ yarn dev: sever
+$ yarn dev:sever
 ```
 
 <br>
