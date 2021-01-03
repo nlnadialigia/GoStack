@@ -35,7 +35,7 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
 ### ⁉️ Índice
 **[A. Estrutura e Ajustes](#idA)**
 
-  1.[Mapeando features do sistema](#id1)
+  1. [Mapeando features do sistema](#id1)
 
 **[B. Perfil do usuário](#idB)**
 
