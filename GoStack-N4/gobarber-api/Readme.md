@@ -83,29 +83,24 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
     - O usuário deve poder recuperar sua senha informando seu email
     - O usuário deve receber um email com instruções de recuperação de senha
     - O usuário deve poder resetar sua senha
-    <br>
 
   - **RNF**
     - Utilizar [Mailtrap](https://mailtrap.io/) para testar envios em ambiente de desenvolvimento
     - Utilizar o [Amazon SES](https://aws.amazon.com/pt/ses/) para envios em produção
     - O envio de email deve acontecer em segundo plano(background job)
-    <br>
 
   - **RN**
     - O link enviado por email para resetar senha deve expirar em 2hs
     - O usuário precisa confirmar a nova senha para que a mesma seja resetada
-    <br>
 
 - **Atualização do perfil**
   - **RF**
     - O usuário deve poder atualizar seu nome, email e senha
-    <br>
 
   - **RN**
     - O usuário não pode alterar seu email já utilizado
     - Para atualizar sua senha, o usuário deve informar a senha antiga
     - Para atualizar sua senha o usuário deve confirmar a sua senha
-    <br>
 
 - **Painel do prestador**
   - **RF**
@@ -113,16 +108,13 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
     - O prestador deve receber uma notificação sempre que houver novo agendamento
     - O prestador deve poder visualizar as notificações não lidas
     - As notificações do prestador devem ser enviadas em tempo real utilizando [Socket.io](https://socket.io/)
-    <br>
 
   - **RNF**
       - Os agendamentos do prestador no dia devem ser armazenados em cache
       - As notificações do prestador devem ser armazenadas no [MongoDB](https://www.mongodb.com/2)
-      <br>
 
   - **RN**
     - A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar
-    <br>
 
 - **Agendamento de serviços**
   - **RF**
@@ -130,11 +122,9 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
     - O usuário deve poder listar os dias de um mẽs com pelo menos um horário disponível de um prestador
     - O usuário deve poder listar horários disponíveis em um dia específico de um prestador
     - O usuário deve poder realizar um novo agendamento com um prestador
-    <br>
 
   - **RNF**
     - A listagem de prestadores deve ser armazenada em cache
-    <br>
 
   - **RN**
     - Cada agendamento deve durar 1h exatamente
@@ -142,7 +132,6 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
     - O usuário não pode agendar em um horário já ocupado
     - O usuário não pode agendar em um horário que já passou
     - O usuário não pode agendar serviços consigo mesmo
-    <br>
 
 ✨ **Referência:** [Utilizando UX para projetar uma aplicação do zero | Masterclass #09](https://www.youtube.com/watch?v=mxIhSTP6ddE)
 
