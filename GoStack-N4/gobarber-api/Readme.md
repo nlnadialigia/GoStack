@@ -34,9 +34,11 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
 
 ### ⁉️ Índice
 **[A. Estrutura e Ajustes](#idA)**
+
   1.[Mapeando features do sistema](#id1)
 
 **[B. Perfil do usuário](#idB)**
+
   2. [Aplicando TDD na prática](#id2)
   3. [Recuperação de senha](#id3)
   4. [Reset de senha](#id4)
@@ -50,6 +52,7 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
   12. [Rota e controller de perfil](#id12)
 
 **[C. Agendamento](#idC)**
+
   13. [Listagem de prestadores](#id13)
   14. [Filtrando agendamentos por mês](#id14)
   15. [Listando dias disponíveis](#id15)
