@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 import { container } from 'tsyringe';
+
+import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 
 export default class SessionsController {
   public async create(request: Request, response: Response): Promise<Response> {

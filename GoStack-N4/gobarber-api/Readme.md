@@ -150,7 +150,14 @@ Módulo para aprendizado de conceitos mais complexos do back-end da aplicação,
 
 #### 📌 Recuperação de senha<div id='id3'/>
 
-Implementação da feature de não recuperação de senha para usuários que não existam e criação de uma solução para garantir que quem gerou a solicitação de troca de senha foi realmente o titular da conta.
+- Implementação da feature de não recuperação de senha para usuários que não existam e criação de uma solução para garantir que quem gerou a solicitação de troca de senha foi realmente o titular da conta.
+
+- **Testes e lógicas criadas**
+* Verificação da existência do usuário
+* Armazenamento de token para recuperação de senha
+* Geração de um token de recuperação de senha
+* Refatoração => para reduzir a repetição de código, serão criadas variáveis globais, que não serão iniciadas globalmente para que haja independência entre os teste.
+
 
 #### 📌 Reset de senha<div id='id4'/>
 
@@ -158,7 +165,14 @@ Implementação da funcionalidade de reset da senha usando um token gerado com a
 
 #### 📌 Finalizando testes<div id='id5'/>
 
-Finalização dos testes e a implementação do service de reset de senha, adicionando os testes que foram mapeados no final da aula anterior, concluindo mais uma feature.
+- Finalização dos testes e a implementação do service de reset de senha e adição de novas features.
+
+- **Testes e lógicas criadas**
+* Hash
+* Token inexistente
+* Usuário inexistente
+* Expiração do email de resetar a senha em 2 horas
+
 
 #### 📌 Salvando tokens no banco<div id='id6'/>
 
