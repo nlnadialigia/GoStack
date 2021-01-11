@@ -1,9 +1,11 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
-import authConfig from '@config/auth';
+
 import AppError from '@shared/errors/AppError';
 
-interface TokenPayload {
+import authConfig from '@config/auth';
+
+interface ITokenPayload {
   iat: number;
   exp: number;
   sub: string;
@@ -24,13 +26,13 @@ export default function ensureAuthenticated(
 
   try {
     const decoded = verify(token, authConfig.jwt.secret);
-    // console.log(decoded);
 
     const { sub } = decoded as TokenPayload;
 
     request.user = {
       id: sub,
     };
+
     return next();
   } catch {
     throw new AppError('Invalid JWT token', 401);
