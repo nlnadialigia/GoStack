@@ -1,5 +1,6 @@
+<h1 align="center">Nível 5</h1>
 <p align="center">
-  <img src="assets/logo.jpg" width="400">
+  <img src="../assets/logo.jpg" width="300" heigth="300">
 </p>
 
 <p align="center">
@@ -14,7 +15,7 @@ ___
 
 <h3 align="center">
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
-  <a href="#book-niveis">Níveis</a>&nbsp;|&nbsp;
+  <a href="#book-modulos">Módulos</a>&nbsp;|&nbsp;
   <a href="#licença">Licença</a>
 </h3>
 
@@ -22,24 +23,17 @@ ___
 
 <br>
 
-# :information_source: Sobre
+## :information_source: Sobre
 
 Repositório dedicado os exercícios realizados nas aulas do Bootcamp GoStack.
 
-<br>
+## :book: Módulos
 
-# :book: Níveis
-
-- [Nível 1](GoStack-N1)
-- [Nível 2](GoStack-N2)
-- [Nível 3](GoStack-N3)
-- [Nível 4](GoStack-N4)
-- [Nível 5](GoStack-N5)
-- [Bônus - FlexBox](FlexBox)
-
+- [Finalizando front-end web do app](./gobarber-web)
+- [Finalizando front-end mobile do app](./app-gobarber)
 
 <br>
 
 ## Licença 
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
